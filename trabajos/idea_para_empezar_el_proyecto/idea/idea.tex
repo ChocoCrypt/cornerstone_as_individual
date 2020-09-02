@@ -1,0 +1,93 @@
+% article example for classicthesis.sty
+\documentclass[10pt,a4paper]{article} % KOMA-Script article scrartcl
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+\usepackage{lipsum}     %lorem ipsum text
+\usepackage{titlesec}   %Section settings
+\usepackage{titling}    %Title settings
+\usepackage[margin=10em]{geometry}  %Adjusting margins
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{amsmath}    %Display equations options
+\usepackage{amssymb}    %More symbols
+\usepackage{xcolor}     %Color settings
+\usepackage{pagecolor}
+\usepackage{mdframed}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{graphicx}
+\graphicspath{ {./Images/} }
+\setlength{\columnsep}{1cm}
+
+% ====| color de la pagina y del fondo |==== %
+\pagecolor{black}
+\color{white}
+
+
+
+\begin{document}
+    %========================{TITLE}====================%
+    \title{\rmfamily\normalfont\spacedallcaps{ idea para el cornerstone }}
+    \author{\spacedlowsmallcaps{Rodrigo Castillo}}
+    \date{\today}
+
+    \maketitle
+
+
+     % ====| Loguito |==== %
+    \includegraphics[width=0.1\linewidth]{negro_cara.png}
+    %=======================NOTES GOES HERE===================%
+    \section{Idea}
+        \subsection{idea facil inicial}
+        para el betha , lo ideal sería lograr automatizar el riego de
+        diferentes plantas según sus características y su estado, para esto,
+        necesitaremos diseñar distintos tipos de sensores que nos retornen
+        estados de las diferentes plantas(humedad,estado de la tierra, bla bla
+        bla) , segun esto, y según lo que investiguemos de los diferentes tipos
+        de plantas, implementar un programa que automatice el cuidado de éstas
+        \begin{figure}[ht]
+            \centering
+            \incfig{ima}
+            \caption{ima}
+            \label{fig:ima}
+        \end{figure}
+        \subsection{formas de escalar}
+            una vez teniendo esto, podemos implementarlo remotamente podemos:
+            \begin{enumerate}
+                \item {manejarlo remotamente desde una interfaz web}
+                \item {desde la interfaz web, hacer una aplicacion web que
+                    controle diferentes sistemas de riegos para diferentes
+                usuarios}
+                \item {mejorar la presentación del producto}
+                \item {agregar especies de plantas}
+
+            \end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+    %=======================NOTES ENDS HERE===================%
+
+    % bib stuff
+    \nocite{*}
+    \addtocontents{toc}{\protect\vspace{\beforebibskip}}
+    \addcontentsline{toc}{section}{\refname}
+    \bibliographystyle{plain}
+    \bibliography{../Bibliography}
+\end{document}
