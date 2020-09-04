@@ -1,0 +1,132 @@
+% article example for classicthesis.sty
+\documentclass[10pt,a4paper]{article} % KOMA-Script article scrartcl
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+\usepackage{lipsum}     %lorem ipsum text
+\usepackage{titlesec}   %Section settings
+\usepackage{titling}    %Title settings
+\usepackage[margin=10em]{geometry}  %Adjusting margins
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{amsmath}    %Display equations options
+\usepackage{amssymb}    %More symbols
+\usepackage{xcolor}     %Color settings
+\usepackage{pagecolor}
+\usepackage{mdframed}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{graphicx}
+\graphicspath{ {./Images/} }
+\setlength{\columnsep}{1cm}
+
+% ====| color de la pagina y del fondo |==== %
+\pagecolor{white}
+\color{black}
+
+
+
+\begin{document}
+    %========================{TITLE}====================%
+    \title{\rmfamily\normalfont\spacedallcaps{Correccion texto de compañeros}}
+    \author{\spacedlowsmallcaps{Rodrigo Castillo}}
+    \date{\today}
+
+    \maketitle
+    %=======================NOTES GOES HERE===================%
+    \\
+        \\ \color{blue} $ azul:  $ lo que me gustó \color{black}
+        \\ \color{forestgreen} $ rojo:  $ lo que no me gustó \color{black}
+        \\ \color{black} $ negro:  $ comentarios mios \color{black}
+    \section{texto original de mi compañero}
+
+        \color{red} La fotosíntesis: 6CO2 + 6H2O C6H12O6 + 6O2, es un proceso químico en el cual
+        las plantas capturan la energía solar y logran convertir agua, dióxido de
+        carbono y ciertos minerales en oxígeno y componentes orgánicos ricos en
+        energía. \color{black} . \color{black} (esta información me parece
+        innecesaria para un resumen) \color{white} .
+        \\
+        \color{blue} Concorde a esta definición, el elemento de la tierra no es fundamental
+        para este proceso, de modo que el cultivo hidropónico, o también conocido como
+        el cultivo urbano, es un método de crecer plantas cuyo objetivo es hacer uso de
+        esta información y crecerlas en la ausencia de tierra, es decir, en agua o una
+        solución de nutrientes. Esto puede ser de gran importancia para países con
+        tierra que no es buena para cultivar, o en una escala más pequeña, a conjuntos
+        urbanos con poco espacio para cultivar.  \color{black}(esta información
+        me pareció útil y la idea me pareció buena, me parece que es una buena
+        característica para enfocarlo en publicidad) \\
+
+        \color{blue} El propósito de este reporte técnico es presentar el diseño y funcionalidad de
+        un sistema de agricultura automático basado en el método hidropónico para así,
+        solucionar el problema de la falta de espacio y tiempo para realizar una huerta
+        casera. Este proyecto cuenta con un prototipo a escala de una torre hidropónica
+        de cultivo, en la cual se van a medir cuatro variables en específico. Además de
+        estos componentes físicos para el montaje del diseño, también cuenta con una
+        interfaz de usuario digital entrelazada con una implementación de un Arduino,
+        para el uso eficaz del prototipo desde una plataforma web.
+        \color{black}  me parece buena idea la implementación de una aplicación
+        web\\
+
+        \color{blue} El método depende de la adquisición de datos concorde a las cuatro variables
+        que se está midiendo, estas siendo: humedad, luz, temperatura y pH, \color{black}
+        \color{red} adicionalmente, la información específica previa sobre el cultivo es de suma
+        importancia. \color{black}  (me parece que debería esclarecer que tipo
+        de plantas van a sembrar en el cultivo o no mencionar el
+        tema del tipo de cultivo que se va a sembrar hasta que la desición esté
+        tomada)\color{blue} Entonces, concorde a la información de los
+        sensores, los valores
+        obtenidos se comparan con valores predispuestos de dichas huertas, para así
+        lograr que el sistema automatizado inteligente formule una reacción adecuada y
+        correspondiente para el beneficio del cultivo. \color{black}  \\
+
+        \color{blue} Este reporte técnico muestra como el uso de la tecnología con el método
+        hidropónico de cultivar puede ser una solución al problema de no poder
+        cultivar, ya sea por falta de espacio o tierra mala para la agricultura. No
+        solamente eso, sino que también se puede llevar al cabo a mayor escala, como a
+        nivel nacional o en un espacio urbano delimitado, y por ende beneficiar una
+        población con la producción de comida de una forma innovadora. \color{black}  \\
+
+
+        \section{Lo que me gustó:}
+        Me parecieron muy positivos los beneficios que este problema podría
+        tener, creo que la implementación de un cultivo hidropónico sería muy
+        positivo para nuestra sociedad. Me parece que es un buen proyecto, bien
+        planteado y con potencial de tener mucho impacto.
+
+
+        \section{Lo que no me gustó:}
+           el párrafo que habla de la fotosíntesis me pareció innecesario, creo
+           que sin ese párrafo, el abstract está completo y muy adecuado
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    %=======================NOTES ENDS HERE===================%
+
+    % bib stuff
+    \nocite{*}
+    \addtocontents{toc}{\protect\vspace{\beforebibskip}}
+    \addcontentsline{toc}{section}{\refname}
+    \bibliographystyle{plain}
+    \bibliography{../Bibliography}
+\end{document}
